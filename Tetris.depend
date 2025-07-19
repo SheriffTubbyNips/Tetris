@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1752931040 source:e:\documents\codestuff\c++\tetris\main.cpp
+	<iostream>
+	<utility>
+	<stdlib.h>
+	<time.h>
+	"E:\\Documents\\CodeStuff\\C++\\Headers\\LateStageGraphicalism\\ConGraphicsFinal.h"
+	<windows.h>
+
+1752745486 e:\\documents\\codestuff\\c++\\headers\\late-stage graphicalism\\conimage.h
+	<windows.h>
+
+1752766380 e:\\documents\\codestuff\\c++\\headers\\late-stage graphicalism\\congraphicsfinal.h
+	<windows.h>
+	<list>
+	<cmath>
+
+1752931314 e:\\documents\\codestuff\\c++\\headers\\latestagegraphicalism\\congraphicsfinal.h
+	<windows.h>
+	<list>
+	<cmath>
+
