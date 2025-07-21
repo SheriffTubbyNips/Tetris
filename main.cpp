@@ -2,7 +2,7 @@
 #include <utility>
 #include <stdlib.h>
 #include <time.h>
-#include "E:\\Documents\\CodeStuff\\C++\\Headers\\LateStageGraphicalism\\ConGraphicsFinal.h"
+#include "ConGraphicsFinal.h"
 #include <windows.h>
 
 using namespace std;
@@ -38,6 +38,17 @@ bool exitMenu;
 bool quit;
 
 int inputDelay = 1;
+
+void ClearScreen()
+{
+    //Dear god why did you do this
+    //Fix this with a less hacky workaround later
+    Image cls(40,40);
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    cls.Display();
+    SetConsoleCursorPosition(hConsole,{0,0});
+}
 
 struct Piece
 {
@@ -246,7 +257,7 @@ void StartMenu()
 {
     exitMenu = false;
 
-    ClearConsole();
+    ClearScreen();
     KeyEventProc = KbStartMenu;
     cout << "Welcome to Tetris!\nPress number keys to select difficulty.\n";
     cout << "1. Easy\n2. Medium\n3. Hard";
@@ -261,7 +272,7 @@ void StartMenu()
         inputDelay++;
         Sleep(200);
     }
-    ClearConsole();
+    ClearScreen();
     frameRate = 500/difficultySelect;
     KeyEventProc = KbGame;
 }
@@ -269,7 +280,7 @@ void StartMenu()
 void LoseMenu()
 {
     Sleep(1000);
-    ClearConsole();
+    ClearScreen();
     cout << "Ya lost.\nPlay again? [Y/N]";
     char selection;
     cin >> selection;
