@@ -24,14 +24,12 @@
 			<Add option="-Wall" />
 			<Add option="-std=c++17" />
 			<Add option="-std=c17" />
-			<Add option="-m64" />
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Linker>
 			<Add option="-static-libstdc++" />
 			<Add option="-static-libgcc" />
 			<Add option="-static" />
-			<Add option="-m64" />
 		</Linker>
 		<Unit filename="main.cpp" />
 		<Extensions>
